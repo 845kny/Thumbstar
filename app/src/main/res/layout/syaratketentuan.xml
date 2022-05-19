@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gambar"
+    tools:context=".SyaratKetentuan">
+
+    <TextView
+        android:id="@+id/textViewsyaratketentuan"
+        android:layout_width="243dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/syarat_dan_ketentuan"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/textViewisisyaratketentuan"
+        android:layout_width="315dp"
+        android:layout_height="387dp"
+        android:text="@string/textviewisisyarat_ketentuan"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <Button
+        android:id="@+id/btnmasuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/rounded"
+        android:enabled="true"
+        android:text="Masuk"
+        android:textColor="@color/black"
+        android:theme="@style/buttonstyle1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbsyarat" />
+
+    <CheckBox
+        android:id="@+id/cbsyarat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="25dp"
+        android:checked="true"
+        android:text="Setuju"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnmasuk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewisisyaratketentuan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

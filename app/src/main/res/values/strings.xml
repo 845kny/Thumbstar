@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Thumbstar</string>
+    <string name="judulregisthumbstar">THUMBSTAR</string>
+    <string name="regisnama">Masukkan Nama Anda</string>
+    <string name="judulregisregistrasi">Registrasi</string>
+    <string name="regisno_telepon">Masukkan No Telepon</string>
+    <string name="regisalamat">Masukkan Alamat</string>
+    <string name="regisbuat_username">Buat Username</string>
+    <string name="regisbuat_password">Buat Password</string>
+    <string name="regisbuttonregistrasi">Registrasi !</string>
+    <string name="regisbuttonsudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="hintmasukkan_nama">Masukkan Nama</string>
+    <string name="hintmasukkan_no_telp">Masukkan No. Telp</string>
+    <string name="hintmasukkan_alamat">Masukkan Alamat</string>
+    <string name="hintbuat_username">Buat Username</string>
+    <string name="hintbuat_password">Buat Password</string>
+    <string name="syarat_dan_ketentuan">Syarat dan Ketentuan</string>
+    <string name="textviewisisyarat_ketentuan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut dictum sapien. Nulla facilisi. Donec eu est id tellus rhoncus ornare. Nulla bibendum odio ut ipsum blandit, at feugiat justo sollicitudin. Mauris facilisis vel ex ut ultrices. Mauris congue quis mauris sed sagittis. Vestibulum tempus lectus in mi tincidunt fringilla. Pellentesque porta ligula non lectus euismod aliquet. Praesent scelerisque eros sapien, nec euismod tellus scelerisque sed.Nam accumsan rhoncus rutrum. Quisque venenatis lacinia dui et laoreet. In sollicitudin finibus elit, ac aliquam neque tempor condimentum. Aenean pretium aliquam vulputate. Nulla condimentum purus dui, id porttitor augue consectetur sed. Curabitur felis felis, gravida sed tincidunt quis, sodales eget mi. Phasellus pharetra est urna. Ut mi risus, facilisis sed massa non, auctor tempor ipsum. In vel augue interdum quam sodales pellentesque id a metus. Donec vitae pretium mi. Sed in leo semper, facilisis ligula sed, viverra mauris. Donec molestie euismod lorem, in vestibulum quam laoreet vel. Donec tincidunt rutrum leo sed porttitor. Sed consectetur sagittis orci id lacinia.</string>
+    <string name="nama">Nama</string>
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="thumbstar">Thumbstar</string>
+    <string name="about_us">About Us</string>
+    <string name="your_best_personal_therapist_partner">Your Best Personal Therapist Partner</string>
+    <string name="next">Next</string>
+    <string name="registrasi">Registrasi</string>
+</resources>
