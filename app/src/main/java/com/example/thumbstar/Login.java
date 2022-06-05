@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
 
         EditText telp = findViewById(R.id.EDTTelp);
         EditText password = findViewById(R.id.EDTPassword);
@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
         Button registrasi = findViewById(R.id.btnregistrasi);
         Button login = findViewById(R.id.btnlogin);
 
-        registrasi.setOnClickListener(view -> startActivity(new Intent(Login.this,Registrasi.class)));
+        registrasi.setOnClickListener(view -> regis());
 
         login.setOnClickListener(view ->{
             if (telp.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
@@ -59,8 +59,14 @@ public class Login extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast toast = Toast.makeText(getApplicationContext(),"Database Error "+error,Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
+    }
+
+    private void regis(){
+        Intent intent = new Intent(Login.this,Registrasi.class);
+        startActivity(intent);
     }
 }

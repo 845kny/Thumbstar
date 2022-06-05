@@ -10,19 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Registrasi extends AppCompatActivity {
 
-    final Button btnsudahpunyaakun = findViewById(R.id.btnregistrasi);
-    final Button btnregis = findViewById(R.id.button_register);
-    final EditText edtnama =findViewById(R.id.edittextnama);
-    final EditText edtnotelp =findViewById(R.id.edittextnotelp);
-    final EditText edtalamat =findViewById(R.id.edittextalamat);
-    final EditText edtemail =findViewById(R.id.edittextemail);
-    final EditText edtpassword = findViewById(R.id.editextpassword);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
 
+        Button btnsudahpunyaakun = findViewById(R.id.btnregistrasi);
+        Button btnregis = findViewById(R.id.button_register);
+        final EditText edtnama =findViewById(R.id.edittextnama);
+        final EditText edtnotelp =findViewById(R.id.edittextnotelp);
+        final EditText edtalamat =findViewById(R.id.edittextalamat);
+        final EditText edtpassword = findViewById(R.id.editextpassword);
+        final EditText edtemail =findViewById(R.id.edittextemail);
         btnsudahpunyaakun.setOnClickListener(view -> startActivity(new Intent(Registrasi.this, Login.class)));
         btnregis.setOnClickListener(view -> {
             if (edtnama.getText().toString().isEmpty() || edtnotelp.getText().toString().isEmpty()|| edtalamat.getText().toString().isEmpty() || edtemail.getText().toString().isEmpty() || edtpassword.getText().toString().isEmpty()){
@@ -35,6 +34,7 @@ public class Registrasi extends AppCompatActivity {
     }
 
     private void cekEmail(){
+        final EditText edtemail =findViewById(R.id.edittextemail);
         if (!edtemail.getText().toString().contains("@gmail.com")) {
             Toast toast = Toast.makeText(getApplicationContext(), "Email Hanya Menggunakan Gmail", Toast.LENGTH_SHORT);
             toast.show();
@@ -44,6 +44,11 @@ public class Registrasi extends AppCompatActivity {
     }
 
     private void cekPassword(){
+        final EditText edtemail =findViewById(R.id.edittextemail);
+        final EditText edtnama =findViewById(R.id.edittextnama);
+        final EditText edtnotelp =findViewById(R.id.edittextnotelp);
+        final EditText edtalamat =findViewById(R.id.edittextalamat);
+        final EditText edtpassword = findViewById(R.id.editextpassword);
         if (edtpassword.getText().toString().length()>=8){
             Intent intent = new Intent(Registrasi.this, SyaratKetentuan.class);
             intent.putExtra("nama",edtnama.getText().toString());

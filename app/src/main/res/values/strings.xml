@@ -31,4 +31,12 @@
     <string name="your_best_personal_therapist_partner">Your Best Personal Therapist Partner</string>
     <string name="next">Next</string>
     <string name="registrasi">Registrasi</string>
+    <string name="silahkan_daftarkan_diri_anda">Silahkan Daftarkan Diri Anda !</string>
+    <string name="password">Password</string>
+    <string name="no_telp">No. Telp</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="email">Email</string>
+    <string name="alamat">Alamat</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun ?</string>
+    <string name="login">Login !</string>
 </resources>
