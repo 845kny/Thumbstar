@@ -39,4 +39,6 @@
     <string name="alamat">Alamat</string>
     <string name="sudah_punya_akun">Sudah Punya Akun ?</string>
     <string name="login">Login !</string>
+    <string name="belum_punya_akun">Belum Punya Akun ?</string>
+    <string name="silahkan_login_untuk_dapat_masuk_ke_thumbstar">Silahkan login untuk dapat masuk ke Thumbstar</string>
 </resources>
