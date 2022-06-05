@@ -6,8 +6,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 public class Registrasi extends AppCompatActivity {
 
     @Override
@@ -35,12 +41,46 @@ public class Registrasi extends AppCompatActivity {
 
     private void cekEmail(){
         final EditText edtemail =findViewById(R.id.edittextemail);
-        if (!edtemail.getText().toString().contains("@gmail.com")) {
+        if (!edtemail.getText().toString().contains("@gmail.com")){
             Toast toast = Toast.makeText(getApplicationContext(), "Email Hanya Menggunakan Gmail", Toast.LENGTH_SHORT);
             toast.show();
-        }else {
-            cekPassword();
+        }else{
+            cekNomor();
         }
+    }
+
+    private void cekNomor(){
+        final EditText edtnotelp =findViewById(R.id.edittextnotelp);
+        if (edtnotelp.getText().toString().length()>=10 && edtnotelp.getText().toString().length()<=14){
+            cekValid();
+        }else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Nomor Minimal 10 Karakter", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+
+    private void cekValid(){
+        final EditText edtnotelp =findViewById(R.id.edittextnotelp);
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference(edtnotelp.getText().toString()).child("notelp");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final String dbtelp =snapshot.getValue(String.class);
+                if (edtnotelp.getText().toString().equals(dbtelp)){
+                    Toast toast = Toast.makeText(getApplicationContext(),"Nomor Telah Terdaftar !",Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    cekPassword();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast toast = Toast.makeText(getApplicationContext(),"Database Error "+error,Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
     }
 
     private void cekPassword(){

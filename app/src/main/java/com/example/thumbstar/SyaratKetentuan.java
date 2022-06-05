@@ -67,6 +67,8 @@ public class SyaratKetentuan extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                Toast toast = Toast.makeText(getApplicationContext(),"Database Error",Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
     }
