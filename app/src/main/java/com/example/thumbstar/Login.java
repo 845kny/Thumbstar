@@ -48,14 +48,33 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final String dbpass =snapshot.getValue(String.class);
                 if (p.equals(dbpass)){
-                    Toast toast = Toast.makeText(getApplicationContext(),"Berhasil Login",Toast.LENGTH_SHORT);
-                    toast.show();
-                    Intent intent = new Intent(Login.this,Dashboard.class);
-                    startActivity(intent);
+                    kirimbiodata(t);
                 }else {
                     Toast toast = Toast.makeText(getApplicationContext(),"password salah",Toast.LENGTH_SHORT);
                     toast.show();
                 }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast toast = Toast.makeText(getApplicationContext(),"Database Error "+error,Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+    }
+
+    private void kirimbiodata(String t){
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference(t).child("nama");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final String nama =snapshot.getValue(String.class);
+                Intent intent = new Intent(Login.this,Dashboard.class);
+                intent.putExtra("nama",nama);
+                startActivity(intent);
+                Toast toast = Toast.makeText(getApplicationContext(),"Berhasil Login",Toast.LENGTH_SHORT);
+                toast.show();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

@@ -4,55 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gambar"
+    android:background="@drawable/bg"
     tools:context=".Login">
 
     <TextView
         android:id="@+id/textViewlogin"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:text="@string/silahkan_login_untuk_dapat_masuk_ke_thumbstar"
-        android:textColor="#263238"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:text="silahkan login akun thumbstar"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <TextView
         android:id="@+id/textViewjudul2"
         android:layout_width="wrap_content"
         android:layout_height="57dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="@font/montserrat_alternates_medium"
         android:text="LOGIN"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089" />
-
-    <EditText
-        android:id="@+id/EDTPassword"
-        android:layout_width="223dp"
-        android:layout_height="53dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Masukkan Password"
-        android:inputType="textAutoCorrect|textPersonName|textPassword"
-        android:minHeight="48dp"
-        android:password="true"
-        android:textAllCaps="false"
-        android:textColorHint="#4E342E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintVertical_bias="0.14" />
 
     <EditText
         android:id="@+id/EDTTelp"
@@ -60,71 +43,107 @@
         android:layout_height="48dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Masukkan Nomor Telepon"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#000000"
         android:textColorHint="#4E342E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.323" />
 
-    <TextView
-        android:id="@+id/textViewTelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No.Telp"
-        android:textColor="#263238"
+    <EditText
+        android:id="@+id/EDTPassword"
+        android:layout_width="223dp"
+        android:layout_height="53dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textAutoCorrect|textPersonName|textPassword"
+        android:minHeight="48dp"
+        android:password="true"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textColorHint="#4E342E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.412" />
 
     <TextView
         android:id="@+id/textViewupassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="Password :"
         android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.419" />
+
+    <TextView
+        android:id="@+id/textViewTelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No.Telp :"
+        android:textColor="#263238"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
 
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
         android:text="LOGIN !"
         android:textColor="#000000"
         android:theme="@style/buttonstyle1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <Button
         android:id="@+id/btnregistrasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/belum_punya_akun"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded"
+        android:text="Registrasi"
         android:textAllCaps="false"
-        android:textSize="10sp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserrat_alternates_medium"
         android:theme="@style/buttonstyle1"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.93" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum Punya Akun ?"
+        android:textColor="#000000"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

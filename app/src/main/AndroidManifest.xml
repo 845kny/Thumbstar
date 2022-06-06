@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thumbstar">
         <activity
+            android:name=".DaftarTerapis"
+            android:exported="false" />
+        <activity
             android:name=".ReservasiDrawer"
             android:exported="false" />
         <activity
