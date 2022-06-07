@@ -14,6 +14,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.32653061224489793" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1875" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/Login.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_customerservice.xml" value="0.176" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_daftarterapis.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_login.xml" value="0.264" />
@@ -21,8 +22,10 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_main2.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_main3.xml" value="0.19927536231884058" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_main4.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_pemesanan.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_pemesanan_drawer.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_registrasi.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_reservasi.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_reservasi.xml" value="0.4" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_reservasi_drawer.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_syarat_ketentuan.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/login.xml" value="0.264" />

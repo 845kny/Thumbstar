@@ -16,9 +16,11 @@ public class Dashboard extends AppCompatActivity {
         ImageView reservasi = findViewById(R.id.reservasi);
         final String nama = getIntent().getStringExtra("nama") ;
         ImageView daftarterapis = findViewById(R.id.terapis);
+        ImageView cs = findViewById(R.id.cs);
         TextView name = findViewById(R.id.nameview);
         name.setText(nama);
         daftarterapis.setOnClickListener(view -> startActivity(new Intent(Dashboard.this, DaftarTerapis.class)));
         reservasi.setOnClickListener(view -> startActivity(new Intent(Dashboard.this,Reservasi.class)));
+        cs.setOnClickListener(view -> startActivity(new Intent(Dashboard.this,Customerservice.class)));
     }
 }

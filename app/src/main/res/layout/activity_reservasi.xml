@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.128" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/nama3"
         android:layout_width="146dp"
         android:layout_height="30dp"
         android:fontFamily="@font/montserrat_alternates_medium"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.634" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/nama2"
         android:layout_width="123dp"
         android:layout_height="30dp"
         android:fontFamily="@font/montserrat_alternates_medium"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.48" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/spesialis3"
         android:layout_width="111dp"
         android:layout_height="18dp"
         android:fontFamily="@font/montserrat"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.694" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/asal1"
         android:layout_width="166dp"
         android:layout_height="19dp"
         android:fontFamily="@font/montserrat"
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.369" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/asal3"
         android:layout_width="166dp"
         android:layout_height="19dp"
         android:fontFamily="@font/montserrat"
@@ -130,7 +130,7 @@
         app:srcCompat="@drawable/profile" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/spesialis2"
         android:layout_width="111dp"
         android:layout_height="18dp"
         android:fontFamily="@font/montserrat"
@@ -144,7 +144,7 @@
         app:layout_constraintVertical_bias="0.541" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/spesialis1"
         android:layout_width="111dp"
         android:layout_height="18dp"
         android:fontFamily="@font/montserrat"
@@ -172,7 +172,7 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/asal2"
         android:layout_width="166dp"
         android:layout_height="19dp"
         android:fontFamily="@font/montserrat"

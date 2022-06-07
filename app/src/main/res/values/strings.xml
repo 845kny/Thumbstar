@@ -41,4 +41,7 @@
     <string name="login">Login !</string>
     <string name="belum_punya_akun">Belum Punya Akun ?</string>
     <string name="silahkan_login_untuk_dapat_masuk_ke_thumbstar">Silahkan login untuk dapat masuk ke Thumbstar</string>
+    <string name="customer_service">Customer Service</string>
+    <string name="terapis">Terapis</string>
+    <string name="dalam_perjalanan">dalam perjalanan</string>
 </resources>

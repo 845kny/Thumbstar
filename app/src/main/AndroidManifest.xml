@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thumbstar">
         <activity
+            android:name=".PemesananDrawer"
+            android:exported="false" />
+        <activity
+            android:name=".Pemesanan"
+            android:exported="false" />
+        <activity
+            android:name=".Customerservice"
+            android:exported="false" />
+        <activity
             android:name=".DaftarTerapis"
             android:exported="false" />
         <activity
