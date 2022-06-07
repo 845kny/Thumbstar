@@ -111,13 +111,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20sp">
+            android:gravity="center"
+            android:layout_marginTop="15sp">
             <Button
                 android:id="@+id/btnbatal"
-                android:layout_width="190sp"
+                android:layout_width="180sp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
-                android:layout_marginLeft="15sp"
                 android:background="@drawable/rounded"
                 android:text="Batal"
                 android:textStyle="bold"
@@ -129,7 +129,7 @@
 
             <Button
                 android:id="@+id/btnkonfirmasi"
-                android:layout_width="190sp"
+                android:layout_width="180sp"
                 android:layout_height="40dp"
                 android:background="@drawable/rounded"
                 android:layout_marginTop="2sp"

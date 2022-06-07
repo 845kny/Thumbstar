@@ -2,6 +2,7 @@ package com.example.thumbstar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,11 +32,11 @@ public class Pemesanan extends AppCompatActivity {
         vspes.setText(spes);
         vasal.setText(asal);
         bottomSheetView.findViewById(R.id.btnkonfirmasi).setOnClickListener(view1 -> {
-            Toast toast = Toast.makeText(getApplicationContext(),"Anda Berhasil Memesan Ini",Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(getApplicationContext(),"Anda Berhasil Memesan "+nama,Toast.LENGTH_SHORT);
             toast.show();
         });
+        bottomSheetView.findViewById(R.id.btnbatal).setOnClickListener(view -> startActivity(new Intent(Pemesanan.this,Reservasi.class)));
         bottomSheetDialog.setContentView(bottomSheetView);
         bottomSheetDialog.show();
-
     }
 }
