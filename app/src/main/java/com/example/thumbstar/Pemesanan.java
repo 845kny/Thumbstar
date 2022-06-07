@@ -2,11 +2,11 @@ package com.example.thumbstar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -30,9 +30,10 @@ public class Pemesanan extends AppCompatActivity {
         vnama.setText(nama);
         vspes.setText(spes);
         vasal.setText(asal);
-//        bottomSheetView.findViewById(R.id.btnpesan).setOnClickListener(view1 -> {
-//
-//        });
+        bottomSheetView.findViewById(R.id.btnkonfirmasi).setOnClickListener(view1 -> {
+            Toast toast = Toast.makeText(getApplicationContext(),"Anda Berhasil Memesan Ini",Toast.LENGTH_SHORT);
+            toast.show();
+        });
         bottomSheetDialog.setContentView(bottomSheetView);
         bottomSheetDialog.show();
 

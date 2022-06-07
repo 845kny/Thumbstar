@@ -128,7 +128,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btnpesan"
+                android:id="@+id/btnkonfirmasi"
                 android:layout_width="190sp"
                 android:layout_height="40dp"
                 android:background="@drawable/rounded"
