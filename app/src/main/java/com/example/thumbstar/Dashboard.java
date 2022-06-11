@@ -3,6 +3,7 @@ package com.example.thumbstar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +22,10 @@ public class Dashboard extends AppCompatActivity {
         name.setText(nama);
         daftarterapis.setOnClickListener(view -> startActivity(new Intent(Dashboard.this, DaftarTerapis.class)));
         reservasi.setOnClickListener(view -> startActivity(new Intent(Dashboard.this,Reservasi.class)));
-        cs.setOnClickListener(view -> startActivity(new Intent(Dashboard.this,Customerservice.class)));
+        cs.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:082220918886"));
+            startActivity(intent);
+        });
     }
 }

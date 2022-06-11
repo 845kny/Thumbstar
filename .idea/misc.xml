@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/custom_edittext.xml" value="0.2415" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/foto1.xml" value="0.1735" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.2415" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.195" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/lock.xml" value="0.2415" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/rounded.xml" value="0.1825" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/drawable/rounded_textview.xml" value="0.135" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/font/archivo_black.xml" value="0.28020833333333334" />
@@ -28,6 +31,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_reservasi.xml" value="0.4" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_reservasi_drawer.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_syarat_ketentuan.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/activity_terapis_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/layout/syaratketentuan.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Thumbstar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2495" />

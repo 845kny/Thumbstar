@@ -28,27 +28,32 @@ public class SyaratKetentuan extends AppCompatActivity {
         String alamat = getIntent().getStringExtra("alamat");
         String email = getIntent().getStringExtra("email");
         String password = getIntent().getStringExtra("password");
-
-        fixSetuju.setOnClickListener(view -> {
-            if (setuju.isChecked()) {
-                adddata(email,password,nama,telp,alamat);
-            }else {
-                Toast notif = Toast.makeText(getApplicationContext(),"Mohon Di Setujui Syarat Dan Kesetujuannya", Toast.LENGTH_SHORT);
-                notif.show();
+        String roles = getIntent().getStringExtra("roles");
+        setuju.setChecked(false);
+        fixSetuju.setEnabled(false);
+        setuju.setOnClickListener(view -> {
+            if (setuju.isChecked()){
+                fixSetuju.setEnabled(true);
+            }else if (!setuju.isChecked()){
+                fixSetuju.setEnabled(false);
             }
+        });
+        fixSetuju.setOnClickListener(view -> {
+            adddata(email,password,nama,telp,alamat,roles);
         });
     }
 
-    private void adddata(String addemail, String addpassword, String addnama, String addtelp, String addalamat){
+    private void adddata(String addemail, String addpassword, String addnama, String addtelp, String addalamat, String roles){
         usermodels akun = new usermodels();
         akun.setEmail(addemail);
         akun.setPassword(addpassword);
         akun.setNama(addnama);
         akun.setNotelp(addtelp);
         akun.setAlamat(addalamat);
+        akun.setRoles(roles);
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference(addtelp);
+        DatabaseReference databaseReference = firebaseDatabase.getReference(roles).child(addtelp);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

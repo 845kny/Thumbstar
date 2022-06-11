@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,24 +32,32 @@ public class Login extends AppCompatActivity {
                 Toast toasti = Toast.makeText(getApplicationContext(),"Harus diisi terlebih dahulu",Toast.LENGTH_SHORT);
                 toasti.show();
             }else{
-                cekdata(telp.getText().toString(),password.getText().toString());
+                cekuser(telp.getText().toString(),password.getText().toString());
             }
         });
     }
 
-    private void cekdata(String t,String p){
+    private void cekuser(String t,String p){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference(t).child("password");
-
+        DatabaseReference databaseReference = firebaseDatabase.getReference("user");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final String dbpass =snapshot.getValue(String.class);
-                if (p.equals(dbpass)){
-                    kirimbiodata(t);
-                }else {
-                    Toast toast = Toast.makeText(getApplicationContext(),"password salah",Toast.LENGTH_SHORT);
-                    toast.show();
+                try {
+                    if (snapshot.hasChild(t)){
+                        String passdb=snapshot.child(t).child("password").getValue(String.class);
+                        if (passdb.equals(p)){
+                            String nama=snapshot.child(t).child("nama").getValue(String.class);
+                            Intent intent = new Intent(Login.this,Dashboard.class);
+                            intent.putExtra("nama",nama);
+                            startActivity(intent);
+                        }else {
+                            Toast.makeText(getApplicationContext(),"Maaf, Password Salah",Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        cekterapis(t,p);
+                    }
+                }catch (Exception ignore){
                 }
             }
             @Override
@@ -62,19 +68,28 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private void kirimbiodata(String t){
+    private void cekterapis(String t, String p){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference(t).child("nama");
-
+        DatabaseReference databaseReference = firebaseDatabase.getReference("terapis");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final String nama =snapshot.getValue(String.class);
-                Intent intent = new Intent(Login.this,Dashboard.class);
-                intent.putExtra("nama",nama);
-                startActivity(intent);
-                Toast toast = Toast.makeText(getApplicationContext(),"Berhasil Login",Toast.LENGTH_SHORT);
-                toast.show();
+                try {
+                    if (snapshot.hasChild(t)){
+                        String passdb=snapshot.child(t).child("password").getValue(String.class);
+                        if (passdb.equals(p)){
+                            String nama=snapshot.child(t).child("nama").getValue(String.class);
+                            Intent intent = new Intent(Login.this,Terapis_Dashboard.class);
+                            intent.putExtra("nama",nama);
+                            startActivity(intent);
+                        }else {
+                            Toast.makeText(getApplicationContext(),"Maaf, Salah Password",Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(),"Maaf, Akun Tidak ada di user dan terapis",Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception ignore){
+                }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

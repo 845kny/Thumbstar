@@ -1,11 +1,10 @@
 package com.example.thumbstar;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.ComponentActivity;
 
 import android.os.Bundle;
 
-public class DaftarTerapis extends AppCompatActivity {
-
+public class DaftarTerapis extends ComponentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

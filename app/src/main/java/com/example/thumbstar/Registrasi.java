@@ -3,19 +3,19 @@ package com.example.thumbstar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-public class Registrasi extends AppCompatActivity {
 
+public class Registrasi extends AppCompatActivity {
+    String roles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +28,33 @@ public class Registrasi extends AppCompatActivity {
         final EditText edtalamat =findViewById(R.id.edittextalamat);
         final EditText edtpassword = findViewById(R.id.editextpassword);
         final EditText edtemail =findViewById(R.id.edittextemail);
+        final CheckBox roleuser = findViewById(R.id.roleuser);
+        final CheckBox roleterapis = findViewById(R.id.roleterapis);
+        roleuser.setChecked(false);
+        roleterapis.setChecked(false);
         btnsudahpunyaakun.setOnClickListener(view -> startActivity(new Intent(Registrasi.this, Login.class)));
         btnregis.setOnClickListener(view -> {
             if (edtnama.getText().toString().isEmpty() || edtnotelp.getText().toString().isEmpty()|| edtalamat.getText().toString().isEmpty() || edtemail.getText().toString().isEmpty() || edtpassword.getText().toString().isEmpty()){
-                Toast toast = Toast.makeText(getApplicationContext(),"Mohon Diisi Terlebih Dahulu",Toast.LENGTH_SHORT);
-                toast.show();
-            }else{
+                Toast.makeText(getApplicationContext(),"Mohon Diisi Terlebih Dahulu",Toast.LENGTH_SHORT).show();
+            }else if (!roleuser.isChecked() && roleterapis.isChecked()){
                 cekEmail();
+            }else if (roleuser.isChecked() && !roleterapis.isChecked()){
+                cekEmail();
+            }else {
+                Toast.makeText(getApplicationContext(),"Mohon, Pilih Role",Toast.LENGTH_SHORT).show();
             }
+        });
+        roleuser.setOnClickListener(view -> {
+            if (roleterapis.isChecked()){
+                roleterapis.setChecked(false);
+            }
+            roles="user";
+        });
+        roleterapis.setOnClickListener(view -> {
+            if (roleuser.isChecked()){
+                roleuser.setChecked(false);
+            }
+            roles="terapis";
         });
     }
 
@@ -62,17 +81,18 @@ public class Registrasi extends AppCompatActivity {
     private void cekValid(){
         final EditText edtnotelp =findViewById(R.id.edittextnotelp);
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference(edtnotelp.getText().toString()).child("notelp");
+        DatabaseReference databaseReference = firebaseDatabase.getReference(roles);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final String dbtelp =snapshot.getValue(String.class);
-                if (edtnotelp.getText().toString().equals(dbtelp)){
-                    Toast toast = Toast.makeText(getApplicationContext(),"Nomor Telah Terdaftar !",Toast.LENGTH_SHORT);
-                    toast.show();
-                }else{
-                    cekPassword();
+                try {
+                    if (snapshot.hasChild(edtnotelp.getText().toString())){
+                        Toast.makeText(getApplicationContext(),"Maaf, Nomor Telah Terdaftar",Toast.LENGTH_SHORT).show();
+                    }else {
+                        cekPassword();
+                    }
+                }catch (Exception ignore){
                 }
             }
             @Override
@@ -96,6 +116,7 @@ public class Registrasi extends AppCompatActivity {
             intent.putExtra("alamat",edtalamat.getText().toString());
             intent.putExtra("email",edtemail.getText().toString());
             intent.putExtra("password",edtpassword.getText().toString());
+            intent.putExtra("roles",roles);
             startActivity(intent);
         }else {
             Toast toast = Toast.makeText(getApplicationContext(), "Password Minimal 8 Karakter", Toast.LENGTH_SHORT);

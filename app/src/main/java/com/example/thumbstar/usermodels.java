@@ -6,6 +6,7 @@ public class usermodels {
     private String nama;
     private String notelp;
     private String alamat;
+    private String roles;
 
     public usermodels(){}
 
@@ -15,6 +16,14 @@ public class usermodels {
         this.nama = nama;
         this.notelp = notelp;
         this.alamat = alamat;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getRoles() {
+        return roles;
     }
 
     public String getEmail() {

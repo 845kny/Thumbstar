@@ -7,6 +7,6 @@
     </style>
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
-        <item name="android:maxHeight">280dp</item>
+        <item name="android:maxHeight">290px</item>
     </style>
 </resources>
